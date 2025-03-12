@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutUsLink = document.getElementById("aboutUsLink");
     const blogLink = document.getElementById("blogLink");
 
-    if (!typedText || !mainContent || !aboutUsLink || !blogLink) {
+    if (!typedText || !mainContent || !aboutUsLink || !blogLink || !myTourLink) {
         console.error("Một trong các phần tử không tồn tại. Kiểm tra lại HTML.");
         return;
     }
@@ -57,6 +57,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 200);
 
+   
+
     // Nội dung của "About Us"
     const aboutUsContent = `
     <div class="container mt-4 fade-in" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
@@ -101,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>TourDi giúp du khách tự tạo lộ trình phù hợp với sở thích, ngân sách và thời gian của mình.</p>
             </div>
             <div class="col-md-4 text-center">
-                <img src="images/camera.png" alt="Máy ảnh du lịch" class="img-fluid rounded shadow animate-image" style="transform: scale(1); transition: transform 0.5s ease-in-out;">
+                <img src="images/dlcnh.png" alt="Máy ảnh du lịch" class="img-fluid rounded shadow animate-image" style="transform: scale(1); transition: transform 0.5s ease-in-out;">
             </div>
         </div>
     </div>`;
