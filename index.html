@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <h2 id="typed-text" class="text-center mt-3"></h2>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOURDI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Nút trở về đầu trang -->
+    <button id="backToTop" class="btn btn-primary" style="display: none; position: fixed; bottom: 20px; right: 20px;">⬆️ Lên đầu trang</button>
+   
+    <!-- Header -->
+    <header class="bg-primary text-white text-center p-3">
+        <h1>TOURDI</h1>
+        <p>To your discover inspiration</p>
+    </header>
+
+    <!-- Navbar --> 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">TOURDI</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#" id="aboutUsLink">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="blogLink">Blog</a></li>
+                <li class="nav-item"><a class="nav-link" href="#" id="myTourLink">My Tour</a></li>
+
+                <!-- Nút Đăng ký/Đăng nhập -->
+<li class="nav-item" id="signupNav">
+    <button class="btn btn-warning" id="signupBtn" data-bs-toggle="modal" data-bs-target="#signupModal">
+        Đăng ký/Đăng nhập
+    </button>
+</li>
+
+
+                <!-- Dropdown My Account (Ẩn mặc định) -->
+                <li class="nav-item dropdown d-none" id="accountNav">
+                    <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="30" height="30" class="rounded-circle">
+                        <span id="navUsername">My Account</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="accountDropdown">
+                        <li class="dropdown-header text-center">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" width="40" height="40" class="rounded-circle">
+                            <p class="mb-0 fw-bold" id="usernameDisplay">Your Name</p>
+                            <p class="text-muted small" id="userIdDisplay">ID: @abcdxyz1</p>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item" href="#">🏠 Home</a></li>
+                        <li><a class="dropdown-item" href="#">✏️ Create a new blog</a></li>
+                        <li><a class="dropdown-item" href="#">🛠️ Add service</a></li>
+                        <li><a class="dropdown-item" href="#">🗺️ Plan my tour</a></li>
+                        <li><a class="dropdown-item" href="#">⚙️ Settings</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><button class="dropdown-item text-danger" id="logoutBtn">🚪 Logout</button></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Modal Đăng ký -->
+<div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signupModalLabel">Đăng ký/Đăng nhập tài khoản</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="signupForm">
+                    <div class="mb-3">
+                        <label for="fullname" class="form-label">Họ và Tên</label>
+                        <input type="text" class="form-control" id="fullname" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Mật khẩu</label>
+                        <input type="password" class="form-control" id="password" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Xác nhận mật khẩu</label>
+                        <input type="password" class="form-control" id="confirmPassword" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Đăng ký/Đăng nhập</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    <!-- Phần nội dung chính -->
+    <section id="mainContent" class="container mt-4">
+        <h2>Chào mừng bạn đến với TOURDI</h2>
+        <p>Khám phá những hành trình tuyệt vời cùng chúng tôi!</p>
+    </section>
+
+   <!-- Footer -->
+<footer class="bg-dark text-white p-4 mt-4">
+    <div class="container">
+        <div class="row">
+            <!-- Cột 1: Logo + Giới thiệu -->
+            <div class="col-md-4">
+                <h5 class="text-warning">TOURDI</h5>
+                <p>Hoạt động trong lĩnh vực du lịch, TOURDI mong muốn mang đến những trải nghiệm tuyệt vời nhất.</p>
+                <a href="#"><img src="logo.png" alt="Logo" style="max-width: 150px;"></a>
+                <div class="mt-2">
+                    <a href="#" class="text-white me-2"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white me-2"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+
+            <!-- Cột 2: Thông tin liên hệ -->
+            <div class="col-md-4">
+                <h5>Công ty du lịch Tourdi</h5>
+                <p>📍 Địa chỉ: updating...</p>
+                <p>📞 Hotline: updating...</p>
+                <p>📧 Email: <a href="mailto:tourdiforwork@gmail.com" class="text-warning">tourdiforwork@gmail.com</a></p>
+            </div>
+
+           <!-- Cột 3: Góc nhìn thiết kế -->
+<!-- Cột 3: Góc nhìn thiết kế -->
+<div class="col-md-4">
+    <h5>Góc nhìn thiết kế</h5>
+    <div class="d-flex align-items-center mb-2">
+        <img src="images/thumb1.jpg" alt="Kinh nghiệm du lịch" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+        <a href="https://www.ivivu.com/blog/2017/01/kinh-nghiem-bo-tui-cho-nhung-nguoi-du-lich-lan-dau/" target="_blank" class="text-white">Kinh nghiệm du lịch hấp dẫn</a>
+    </div>
+    <div class="d-flex align-items-center mb-2">
+        <img src="images/thumb2.jpg" alt="Cẩm nang du lịch" style="width: 50px; height: 50px; object-fit: cover; margin-right: 10px;">
+        <a href="https://camnang.dulichbennghe.vn/du-lich-tu-tuc-hoi-an-trong-tam-tay/" target="_blank" class="text-white">Cẩm nang du lịch</a>
+    </div>
+    <a href="#" class="text-warning">Xem thêm</a>
+</div>
+</div>
+</div>
+<div class="text-center mt-3">
+<p>© 2025 - TOURDI'S WEBSITE</p>
+</div>
+</footer>
+
+    <!-- Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Ngăn chặn form reload trang
+        
+            // Lấy dữ liệu từ form
+            let fullName = document.getElementById("fullname").value;
+            let randomID = "@user" + Math.floor(Math.random() * 100000);
+        
+            // Cập nhật thông tin tài khoản trên Navbar
+            document.getElementById("usernameDisplay").textContent = fullName;
+            document.getElementById("userIdDisplay").textContent = "ID: " + randomID;
+            document.getElementById("navUsername").textContent = fullName;
+        
+            // Ẩn nút Đăng ký / Đăng nhập, hiển thị Dropdown tài khoản
+            document.getElementById("signupNav").classList.add("d-none");
+            document.getElementById("accountNav").classList.remove("d-none");
+        
+            // Ẩn modal sau khi đăng ký thành công
+            let modal = bootstrap.Modal.getInstance(document.getElementById("signupModal"));
+            modal.hide();
+        });
+        
+        // Xử lý đăng xuất
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+            // Hiển thị lại nút Đăng ký / Đăng nhập, ẩn Dropdown tài khoản
+            document.getElementById("signupNav").classList.remove("d-none");
+            document.getElementById("accountNav").classList.add("d-none");
+        });
+        </script>
+        
+</body>
+</html>

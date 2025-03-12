@@ -1,0 +1,188 @@
+/* Cấu hình chung */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button {
+    background: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+button:hover {
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.7);
+}
+
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+/* Header */
+header {
+    background: url('images/flowers.jpg') no-repeat center center;
+    background-size: cover;
+    color: white; /* Để chữ dễ đọc */
+    text-align: center;
+    padding: 30px 0;
+}
+
+/*đổ bóng*/
+header h1, header p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/*mờ nền*/
+header {
+    position: relative;
+}
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+header h1, header p {
+    position: relative;
+    z-index: 1;
+}
+
+
+/* Menu điều hướng */
+.navbar {
+    background: #004085;
+    padding: 10px 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar .nav-link {
+    color: #FFFFFF !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Hiệu ứng menu */
+.navbar-nav .nav-item {
+    margin-right: 15px;
+}
+
+.navbar-nav .nav-link {
+    color: white;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffcc00;
+}
+
+/* Hamburger icon */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(255,255,255,1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Menu mở rộng */
+.navbar-collapse {
+    transition: max-height 0.5s ease-in-out;
+}
+
+/* Nội dung */
+section {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.footer-content a {
+    color: #FFD700; /* Màu vàng nổi bật */
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+
+/* Hiệu ứng */
+h1 {
+    transition: opacity 1s ease-in-out;
+}
+/* Dropdown menu đẹp hơn */
+.dropdown-menu {
+    width: 250px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-header img {
+    display: block;
+    margin: 0 auto;
+}
+
+.dropdown-header p {
+    margin: 5px 0;
+}
+
+.dropdown-item {
+    padding: 10px 15px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dropdown-item:hover {
+    background: #f3f1f1;
+    border-radius: 5px;
+}
+
+/* Hiệu ứng fade-in cho nội dung */
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Hiệu ứng phóng to nhẹ cho ảnh */
+.animate-image {
+    transform: scale(0.8);
+    transition: transform 0.5s ease-in-out;
+}
