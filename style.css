@@ -36,6 +36,7 @@ button:hover {
     display: none;
 }
 
+
 /* Header */
 header {
     background: url('images/flowers.jpg') no-repeat center center;
@@ -143,6 +144,23 @@ footer {
 .footer-content a:hover {
     text-decoration: underline;
 }
+
+footer {
+    position: relative; /* Để mã QR bám vào footer */
+    min-height: 150px;
+}
+
+.qr-container {
+    position: absolute;
+    right: 20px;  /* Căn sát mép phải */
+    bottom: 20px; /* Căn sát mép dưới */
+}
+
+.qr-code {
+    width: 70px; /* Điều chỉnh kích thước */
+    height: auto;
+}
+
 
 
 /* Hiệu ứng */

@@ -14,9 +14,6 @@ document.addEventListener("DOMContentLoaded", function () {
     <div id="homeCarousel" class="carousel slide fade-in show" data-bs-ride="carousel" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/toudi.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt=" Tourdi">
-            </div>
-            <div class="carousel-item">
                 <img src="images/da-nang.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Bà Nà Hill">
             </div>
             <div class="carousel-item">
@@ -27,9 +24,6 @@ document.addEventListener("DOMContentLoaded", function () {
             </div>
             <div class="carousel-item">
                 <img src="images/da-lat.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Đà Lạt">
-            </div>
-            <div class="carousel-item">
-                <img src="images/cantho.jpg" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Cần Thơ">
             </div>
         </div>
         <!-- Nút điều hướng -->
@@ -57,56 +51,56 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }, 200);
 
-   
 
-    // Nội dung của "About Us"
-    const aboutUsContent = `
-    <div class="container mt-4 fade-in" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
-        <div class="row">
-            <!-- Hiệu ứng trình chiếu ảnh -->
-            <div class="col-md-6 d-flex justify-content-center">
-                <div id="vietnamCarousel" class="carousel slide me-3" data-bs-ride="carousel" style="width: 100%;">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="images/vn.jpg" class="d-block w-100 rounded shadow" alt="Ảnh Việt Nam 1">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/vn2.jpg" class="d-block w-75 mx-auto rounded shadow" alt="Ảnh Việt Nam 2">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="images/vn4.jpg" class="d-block w-75 mx-auto rounded shadow" alt="Ảnh Việt Nam 2">
-                        </div>
-                    </div>
-                    <!-- Nút điều hướng -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#vietnamCarousel" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#vietnamCarousel" data-bs-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- Nội dung văn bản -->
-            <div class="col-md-6 d-flex align-items-center">
-                <div>
-                    <h2 class="text-primary">Du lịch thông minh</h2>
-                    <p>Về bản chất, để một thứ gì đó trở nên “thông minh”, cần phải có khả năng tích hợp các công nghệ phức tạp để cho phép khai thác một loạt thông tin sau đó được sử dụng để thông báo cho hoạt động và phát triển sản phẩm.</p>
-                </div>
-            </div>
+    // Nội dung của "About Us" 
+const aboutUsContent = `
+<div class="container mt-4 fade-in" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
+    <div class="row">
+        <!-- Ảnh đầu tiên (điều chỉnh kích thước phù hợp với thị hiếu) -->
+        <div class="col-md-6 d-flex justify-content-center">
+            <img src="images/vn.jpg" class="img-fluid rounded shadow animate-image w-65" 
+                 alt="Ảnh Việt Nam">
         </div>
 
-        <!-- Phần thứ hai -->
-        <div class="row align-items-center mt-4">
-            <div class="col-md-8">
-                <h2 class="text-primary">Hỗ trợ xây dựng lộ trình cá nhân hóa</h2>
-                <p>TourDi giúp du khách tự tạo lộ trình phù hợp với sở thích, ngân sách và thời gian của mình.</p>
-            </div>
-            <div class="col-md-4 text-center">
-                <img src="images/dlcnh.png" alt="Máy ảnh du lịch" class="img-fluid rounded shadow animate-image" style="transform: scale(1); transition: transform 0.5s ease-in-out;">
+        <!-- Nội dung văn bản -->
+        <div class="col-md-6 d-flex align-items-center">
+            <div>
+                <h2 class="text-primary">Du lịch thông minh</h2>
+                <p>Về bản chất, để một thứ gì đó trở nên “thông minh”, cần phải có khả năng tích hợp các công nghệ phức tạp để cho phép khai thác một loạt thông tin sau đó được sử dụng để thông báo cho hoạt động và phát triển sản phẩm.</p>
             </div>
         </div>
-    </div>`;
+    </div> <!-- Đóng div.row -->
+
+    <!-- Phần thứ hai -->
+    <div class="row align-items-center mt-4">
+        <div class="col-md-8">
+            <h2 class="text-primary">Xây dựng lộ trình cá nhân hóa</h2>
+            <p>TourDi giúp du khách tự tạo lộ trình phù hợp với sở thích, ngân sách và thời gian của mình.</p>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="images/dlcnh.png" alt="Máy ảnh du lịch" class="img-fluid rounded shadow animate-image w-65">
+        </div>
+    </div> <!-- Đóng div.row -->
+</div> <!-- Đóng div.container -->
+
+<!-- CSS cho hiệu ứng ảnh -->
+<style>
+    .animate-image {
+        transform: scale(1);
+        transition: transform 0.5s ease-in-out;
+    }
+    .animate-image:hover {
+        transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    }
+    /* Đảm bảo ảnh đầu tiên nhỏ hơn và cân đối với văn bản */
+    img.w-65 {
+        max-width: 65%; /* Giữ kích thước nhỏ hơn nhưng vẫn đủ nổi bật */
+        height: auto;
+    }
+</style>
+`;
+
+
 
     // Nội dung của "Blog"
     const blogContent = `
