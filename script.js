@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     <div id="homeCarousel" class="carousel slide fade-in show" data-bs-ride="carousel" style="opacity: 0; transition: opacity 0.5s ease-in-out;">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="images/da-nang.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Bà Nà Hill">
+                <img src="images/toudi.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Bà Nà Hill">
             </div>
             <div class="carousel-item">
                 <img src="images/sapa.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Sapa">
+            </div>
+            <div class="carousel-item">
+                <img src="images/da-nang.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Đà Nẵng">
             </div>
             <div class="carousel-item">
                 <img src="images/vinhhalong.PNG" class="d-block w-100 img-fluid rounded shadow" style="max-height: 650px; object-fit: cover;" alt="Vịnh Hạ Long">
